@@ -1,0 +1,85 @@
+/* GASPALS docs theme: the purple of the GASPALS Blueprint comment boxes (R 0.74, G 0, B 1). */
+:root,
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #5b1a9e;
+  --md-primary-fg-color--light: #7a35c4;
+  --md-primary-fg-color--dark: #3f0f72;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #b100f0;
+  --md-accent-fg-color--transparent: rgba(177, 0, 240, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #4a1585;
+  --md-primary-fg-color--light: #6c2bb3;
+  --md-primary-fg-color--dark: #2e0b55;
+  --md-accent-fg-color: #d266ff;
+  --md-accent-fg-color--transparent: rgba(210, 102, 255, 0.12);
+  --md-typeset-a-color: #c58bff;
+}
+
+/* Wide reference tables: keep descriptions readable, let names wrap. */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+.md-typeset table:not([class]) td:first-child {
+  min-width: 11rem;
+}
+.md-typeset table:not([class]) td:last-child {
+  min-width: 18rem;
+}
+
+/* Home page hero and feature cards. */
+.gaspals-hero {
+  padding: 1.2rem 0 0.4rem;
+}
+.gaspals-hero h1 {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+.gaspals-hero p.tagline {
+  font-size: 1.05rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0;
+}
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: 0.4rem;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Step lists in tutorials. */
+.md-typeset ol > li::marker {
+  font-weight: 700;
+  color: var(--md-accent-fg-color);
+}
+
+/* Small asset-path lines under reference headings. */
+.md-typeset small code {
+  font-size: 0.85em;
+}
+
+/* Keyboard keys a little bolder. */
+.md-typeset .keys kbd {
+  font-weight: 600;
+}
+
+/* Secondary buttons: readable in both schemes (the primary purple is too dark on the slate background). */
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary) {
+  color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+}
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  background-color: var(--md-primary-fg-color--light);
+  border-color: var(--md-primary-fg-color--light);
+}
+.gaspals-hero h1 {
+  color: var(--md-default-fg-color);
+}
+
+/* "At a glance" tables are written with an empty header row (| | |): hide it. */
+.md-typeset table:not([class]) thead:has(th:first-child:empty):has(th:last-child:empty) {
+  display: none;
+}
